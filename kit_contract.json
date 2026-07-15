@@ -1,0 +1,926 @@
+{
+ "FI_AntennaMast": [
+  {
+   "identifier": "Socket_3",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Height",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Base Radius",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Dish",
+   "type": "NodeSocketBool"
+  }
+ ],
+ "FI_ContainerRack": [
+  {
+   "identifier": "Socket_3",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Unit",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Radius",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Seed",
+   "type": "NodeSocketInt"
+  }
+ ],
+ "FI_Coupler": [
+  {
+   "identifier": "Socket_4",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "R Fore",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "R Aft",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Length",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_3",
+   "in_out": "INPUT",
+   "name": "Segments",
+   "type": "NodeSocketInt"
+  }
+ ],
+ "FI_DishAntenna": [
+  {
+   "identifier": "Socket_2",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Dish Radius",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Boom",
+   "type": "NodeSocketFloat"
+  }
+ ],
+ "FI_DockingNode": [
+  {
+   "identifier": "Socket_1",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Size",
+   "type": "NodeSocketFloat"
+  }
+ ],
+ "FI_EngineCluster": [
+  {
+   "identifier": "Socket_4",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Count",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Ring Radius",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Bell Radius",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_3",
+   "in_out": "INPUT",
+   "name": "Bell Length",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_5",
+   "in_out": "INPUT",
+   "name": "Type",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_6",
+   "in_out": "INPUT",
+   "name": "Segments",
+   "type": "NodeSocketInt"
+  }
+ ],
+ "FI_EngineSection": [
+  {
+   "identifier": "Socket_5",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Unit",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Radius",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Count",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_3",
+   "in_out": "INPUT",
+   "name": "Type",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_4",
+   "in_out": "INPUT",
+   "name": "Seed",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_6",
+   "in_out": "INPUT",
+   "name": "Segments",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_7",
+   "in_out": "INPUT",
+   "name": "Length",
+   "type": "NodeSocketFloat"
+  }
+ ],
+ "FI_FrameShip": [
+  {
+   "identifier": "Socket_9",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Seed",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Length",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Depth",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_3",
+   "in_out": "INPUT",
+   "name": "Wing Pairs",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_4",
+   "in_out": "INPUT",
+   "name": "Ring",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_5",
+   "in_out": "INPUT",
+   "name": "Engine Count",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_6",
+   "in_out": "INPUT",
+   "name": "Engine Type",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_7",
+   "in_out": "INPUT",
+   "name": "Greebles",
+   "type": "NodeSocketCollection"
+  },
+  {
+   "identifier": "Socket_8",
+   "in_out": "INPUT",
+   "name": "Greeble Density",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_10",
+   "in_out": "INPUT",
+   "name": "Auto Slots",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_11",
+   "in_out": "INPUT",
+   "name": "Slot 1 Type",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_12",
+   "in_out": "INPUT",
+   "name": "Slot 2 Type",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_13",
+   "in_out": "INPUT",
+   "name": "Slot 3 Type",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_14",
+   "in_out": "INPUT",
+   "name": "Slot 4 Type",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_15",
+   "in_out": "INPUT",
+   "name": "Slot 5 Type",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_16",
+   "in_out": "INPUT",
+   "name": "Slot 6 Type",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_17",
+   "in_out": "INPUT",
+   "name": "Ring Style",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_18",
+   "in_out": "INPUT",
+   "name": "Ring Position",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_19",
+   "in_out": "INPUT",
+   "name": "Wing Position",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_20",
+   "in_out": "INPUT",
+   "name": "Engines",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_21",
+   "in_out": "INPUT",
+   "name": "Windows",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_22",
+   "in_out": "INPUT",
+   "name": "Gold Fraction",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_23",
+   "in_out": "INPUT",
+   "name": "Docked Craft",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_24",
+   "in_out": "INPUT",
+   "name": "Radial Count",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_25",
+   "in_out": "INPUT",
+   "name": "Dish Count",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_26",
+   "in_out": "INPUT",
+   "name": "Bow Style",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_27",
+   "in_out": "INPUT",
+   "name": "Detail",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_28",
+   "in_out": "INPUT",
+   "name": "Width Variation",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_29",
+   "in_out": "INPUT",
+   "name": "RCS",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_30",
+   "in_out": "INPUT",
+   "name": "Wing Fold (deg)",
+   "type": "NodeSocketFloat"
+  }
+ ],
+ "FI_GreebleScatter": [
+  {
+   "identifier": "Socket_9",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Greebles",
+   "type": "NodeSocketCollection"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Mask",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_3",
+   "in_out": "INPUT",
+   "name": "Density (per m2)",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_4",
+   "in_out": "INPUT",
+   "name": "Greeble Count",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_5",
+   "in_out": "INPUT",
+   "name": "Scale Min",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_6",
+   "in_out": "INPUT",
+   "name": "Scale Max",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_7",
+   "in_out": "INPUT",
+   "name": "Align Fore-Aft",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_8",
+   "in_out": "INPUT",
+   "name": "Seed",
+   "type": "NodeSocketInt"
+  }
+ ],
+ "FI_NodeSection": [
+  {
+   "identifier": "Socket_5",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Radius",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Seed",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Radial Count",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_3",
+   "in_out": "INPUT",
+   "name": "Docked Craft",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_4",
+   "in_out": "INPUT",
+   "name": "Cupola",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_6",
+   "in_out": "INPUT",
+   "name": "Length",
+   "type": "NodeSocketFloat"
+  }
+ ],
+ "FI_Panelize": [
+  {
+   "identifier": "Socket_8",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Mask",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Panel Angle (deg)",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_3",
+   "in_out": "INPUT",
+   "name": "Gap Ratio",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_4",
+   "in_out": "INPUT",
+   "name": "Groove Depth",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_5",
+   "in_out": "INPUT",
+   "name": "Plate Height Min",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_6",
+   "in_out": "INPUT",
+   "name": "Plate Height Max",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_7",
+   "in_out": "INPUT",
+   "name": "Seed",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_9",
+   "in_out": "INPUT",
+   "name": "Seam Selection",
+   "type": "NodeSocketBool"
+  }
+ ],
+ "FI_RCS_Block": [
+  {
+   "identifier": "Socket_2",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Size",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Nozzle Length",
+   "type": "NodeSocketFloat"
+  }
+ ],
+ "FI_RadiatorArray": [
+  {
+   "identifier": "Socket_4",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Fin Count",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Fin Length",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Fin Height",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_3",
+   "in_out": "INPUT",
+   "name": "Pitch",
+   "type": "NodeSocketFloat"
+  }
+ ],
+ "FI_ReactorSection": [
+  {
+   "identifier": "Socket_3",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Unit",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Radius",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Seed",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_4",
+   "in_out": "INPUT",
+   "name": "Length",
+   "type": "NodeSocketFloat"
+  }
+ ],
+ "FI_RingHab": [
+  {
+   "identifier": "Socket_3",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Radius",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Segments",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Tube Radius",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_4",
+   "in_out": "INPUT",
+   "name": "Tube Verts",
+   "type": "NodeSocketInt"
+  }
+ ],
+ "FI_SolarArray": [
+  {
+   "identifier": "Socket_5",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Panels",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Panel Length",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Panel Width",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_3",
+   "in_out": "INPUT",
+   "name": "Amber",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_4",
+   "in_out": "INPUT",
+   "name": "Radiator",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_6",
+   "in_out": "INPUT",
+   "name": "Fold (deg)",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_7",
+   "in_out": "INPUT",
+   "name": "Hinges",
+   "type": "NodeSocketBool"
+  }
+ ],
+ "FI_SpokeWheel": [
+  {
+   "identifier": "Socket_3",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Radius",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Arms",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Capsule Radius",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_4",
+   "in_out": "INPUT",
+   "name": "Capsule Verts",
+   "type": "NodeSocketInt"
+  }
+ ],
+ "FI_StackSegment": [
+  {
+   "identifier": "Socket_4",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Radius",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Length",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Rings",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_3",
+   "in_out": "INPUT",
+   "name": "Band",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_5",
+   "in_out": "INPUT",
+   "name": "End Caps",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_6",
+   "in_out": "INPUT",
+   "name": "Windows",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_7",
+   "in_out": "INPUT",
+   "name": "Gold",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_8",
+   "in_out": "INPUT",
+   "name": "RCS",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_9",
+   "in_out": "INPUT",
+   "name": "Segments",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_10",
+   "in_out": "INPUT",
+   "name": "Fabric",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_11",
+   "in_out": "INPUT",
+   "name": "Cap Style",
+   "type": "NodeSocketInt"
+  }
+ ],
+ "FI_TankBay": [
+  {
+   "identifier": "Socket_3",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Unit",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Radius",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Seed",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_4",
+   "in_out": "INPUT",
+   "name": "Segments",
+   "type": "NodeSocketInt"
+  }
+ ],
+ "FI_TankCluster": [
+  {
+   "identifier": "Socket_2",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Count",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Radius",
+   "type": "NodeSocketFloat"
+  }
+ ],
+ "FI_TrussSegment": [
+  {
+   "identifier": "Socket_3",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Bays",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Bay Length",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Side",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_4",
+   "in_out": "INPUT",
+   "name": "Conduits",
+   "type": "NodeSocketBool"
+  }
+ ]
+}

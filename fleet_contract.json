@@ -1,0 +1,1302 @@
+{
+ "FI_AntennaMast": [
+  {
+   "identifier": "Socket_1",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Size",
+   "type": "NodeSocketFloat"
+  }
+ ],
+ "FI_Chevron": [
+  {
+   "identifier": "Socket_1",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Size",
+   "type": "NodeSocketFloat"
+  }
+ ],
+ "FI_FleetDressedHull": [
+  {
+   "identifier": "Socket_51",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Seed",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Class",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Length",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_3",
+   "in_out": "INPUT",
+   "name": "Beam",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_4",
+   "in_out": "INPUT",
+   "name": "Depth",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_5",
+   "in_out": "INPUT",
+   "name": "Stations",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_6",
+   "in_out": "INPUT",
+   "name": "Faction",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_7",
+   "in_out": "INPUT",
+   "name": "Plateaus",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_8",
+   "in_out": "INPUT",
+   "name": "Plateau Height",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_9",
+   "in_out": "INPUT",
+   "name": "Plateau Width",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_10",
+   "in_out": "INPUT",
+   "name": "Chine",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_11",
+   "in_out": "INPUT",
+   "name": "Chine Slope",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_12",
+   "in_out": "INPUT",
+   "name": "Bow Wedge",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_13",
+   "in_out": "INPUT",
+   "name": "Stern Block",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_14",
+   "in_out": "INPUT",
+   "name": "Nose Style",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_15",
+   "in_out": "INPUT",
+   "name": "Nose Taper",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_16",
+   "in_out": "INPUT",
+   "name": "Nose Tip",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_17",
+   "in_out": "INPUT",
+   "name": "Mass Bias",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_18",
+   "in_out": "INPUT",
+   "name": "Waist",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_19",
+   "in_out": "INPUT",
+   "name": "Waist Position",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_20",
+   "in_out": "INPUT",
+   "name": "Saddle",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_21",
+   "in_out": "INPUT",
+   "name": "Stern Style",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_22",
+   "in_out": "INPUT",
+   "name": "Stern Taper",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_23",
+   "in_out": "INPUT",
+   "name": "Stern Tip",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_24",
+   "in_out": "INPUT",
+   "name": "Stern Rake",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_25",
+   "in_out": "INPUT",
+   "name": "Deck Crown",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_26",
+   "in_out": "INPUT",
+   "name": "Keel Crown",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_27",
+   "in_out": "INPUT",
+   "name": "Chine 2",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_28",
+   "in_out": "INPUT",
+   "name": "Chine 2 Slope",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_29",
+   "in_out": "INPUT",
+   "name": "Keel",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_30",
+   "in_out": "INPUT",
+   "name": "Towers",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_31",
+   "in_out": "INPUT",
+   "name": "Tower Levels",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_32",
+   "in_out": "INPUT",
+   "name": "Tower Height",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_33",
+   "in_out": "INPUT",
+   "name": "Tower Width",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_34",
+   "in_out": "INPUT",
+   "name": "Tower Rake",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_35",
+   "in_out": "INPUT",
+   "name": "Nozzles",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_36",
+   "in_out": "INPUT",
+   "name": "Panel Density",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_37",
+   "in_out": "INPUT",
+   "name": "Patchwork",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_38",
+   "in_out": "INPUT",
+   "name": "Accent Fields",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_39",
+   "in_out": "INPUT",
+   "name": "Blisters",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_40",
+   "in_out": "INPUT",
+   "name": "Light Rows",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_41",
+   "in_out": "INPUT",
+   "name": "Accent Bands",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_42",
+   "in_out": "INPUT",
+   "name": "Dorsal Stripe",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_43",
+   "in_out": "INPUT",
+   "name": "Hue Jitter",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_44",
+   "in_out": "INPUT",
+   "name": "Window Glow",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_45",
+   "in_out": "INPUT",
+   "name": "Deck Markings",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_46",
+   "in_out": "INPUT",
+   "name": "Thrusters",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_47",
+   "in_out": "INPUT",
+   "name": "Bow Mouth",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_48",
+   "in_out": "INPUT",
+   "name": "Hangars",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_49",
+   "in_out": "INPUT",
+   "name": "Hangar Size",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_50",
+   "in_out": "INPUT",
+   "name": "Deck Trench",
+   "type": "NodeSocketFloat"
+  }
+ ],
+ "FI_FleetFin": [
+  {
+   "identifier": "Socket_3",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Size",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Hull Mat",
+   "type": "NodeSocketMaterial"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Accent Mat",
+   "type": "NodeSocketMaterial"
+  }
+ ],
+ "FI_FleetHull": [
+  {
+   "identifier": "Socket_36",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Seed",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Length",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Beam",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_3",
+   "in_out": "INPUT",
+   "name": "Depth",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_4",
+   "in_out": "INPUT",
+   "name": "Stations",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_5",
+   "in_out": "INPUT",
+   "name": "Cols",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_6",
+   "in_out": "INPUT",
+   "name": "Rows",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_7",
+   "in_out": "INPUT",
+   "name": "Chine",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_8",
+   "in_out": "INPUT",
+   "name": "Chine Slope",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_9",
+   "in_out": "INPUT",
+   "name": "Bow Wedge",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_10",
+   "in_out": "INPUT",
+   "name": "Stern Block",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_11",
+   "in_out": "INPUT",
+   "name": "Class",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_12",
+   "in_out": "INPUT",
+   "name": "Nose Style",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_13",
+   "in_out": "INPUT",
+   "name": "Nose Taper",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_14",
+   "in_out": "INPUT",
+   "name": "Nose Tip",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_15",
+   "in_out": "INPUT",
+   "name": "Mass Bias",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_16",
+   "in_out": "INPUT",
+   "name": "Waist",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_17",
+   "in_out": "INPUT",
+   "name": "Waist Position",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_18",
+   "in_out": "INPUT",
+   "name": "Saddle",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_19",
+   "in_out": "INPUT",
+   "name": "Stern Style",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_20",
+   "in_out": "INPUT",
+   "name": "Stern Taper",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_21",
+   "in_out": "INPUT",
+   "name": "Stern Tip",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_22",
+   "in_out": "INPUT",
+   "name": "Stern Rake",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_23",
+   "in_out": "INPUT",
+   "name": "Deck Crown",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_24",
+   "in_out": "INPUT",
+   "name": "Keel Crown",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_25",
+   "in_out": "INPUT",
+   "name": "Chine 2",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_26",
+   "in_out": "INPUT",
+   "name": "Chine 2 Slope",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_27",
+   "in_out": "INPUT",
+   "name": "Plateaus",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_28",
+   "in_out": "INPUT",
+   "name": "Plateau Height",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_29",
+   "in_out": "INPUT",
+   "name": "Plateau Width",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_30",
+   "in_out": "INPUT",
+   "name": "Keel",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_31",
+   "in_out": "INPUT",
+   "name": "Towers",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_32",
+   "in_out": "INPUT",
+   "name": "Tower Levels",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_33",
+   "in_out": "INPUT",
+   "name": "Tower Height",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_34",
+   "in_out": "INPUT",
+   "name": "Tower Width",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_35",
+   "in_out": "INPUT",
+   "name": "Tower Rake",
+   "type": "NodeSocketFloat"
+  }
+ ],
+ "FI_FleetNacelle": [
+  {
+   "identifier": "Socket_4",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Size",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Hull Mat",
+   "type": "NodeSocketMaterial"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Glow Mat",
+   "type": "NodeSocketMaterial"
+  },
+  {
+   "identifier": "Socket_3",
+   "in_out": "INPUT",
+   "name": "Dark Mat",
+   "type": "NodeSocketMaterial"
+  }
+ ],
+ "FI_FleetProfile": [
+  {
+   "identifier": "Socket_16",
+   "in_out": "OUTPUT",
+   "name": "W",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_17",
+   "in_out": "OUTPUT",
+   "name": "H",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_18",
+   "in_out": "OUTPUT",
+   "name": "Zc",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "t",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Seed",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Bow Wedge",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_3",
+   "in_out": "INPUT",
+   "name": "Stern Block",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_4",
+   "in_out": "INPUT",
+   "name": "Class",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_5",
+   "in_out": "INPUT",
+   "name": "Nose Style",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_6",
+   "in_out": "INPUT",
+   "name": "Nose Taper",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_7",
+   "in_out": "INPUT",
+   "name": "Nose Tip",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_8",
+   "in_out": "INPUT",
+   "name": "Mass Bias",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_9",
+   "in_out": "INPUT",
+   "name": "Waist",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_10",
+   "in_out": "INPUT",
+   "name": "Waist Position",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_11",
+   "in_out": "INPUT",
+   "name": "Saddle",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_12",
+   "in_out": "INPUT",
+   "name": "Stern Style",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_13",
+   "in_out": "INPUT",
+   "name": "Stern Taper",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_14",
+   "in_out": "INPUT",
+   "name": "Stern Tip",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_15",
+   "in_out": "INPUT",
+   "name": "Stern Rake",
+   "type": "NodeSocketFloat"
+  }
+ ],
+ "FI_FleetProng": [
+  {
+   "identifier": "Socket_3",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Length",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Hull Mat",
+   "type": "NodeSocketMaterial"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Glow Mat",
+   "type": "NodeSocketMaterial"
+  }
+ ],
+ "FI_FleetShip": [
+  {
+   "identifier": "Socket_72",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Seed",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Class",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Faction",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_3",
+   "in_out": "INPUT",
+   "name": "Detail",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_4",
+   "in_out": "INPUT",
+   "name": "Scale",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_5",
+   "in_out": "INPUT",
+   "name": "Length Mult",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_6",
+   "in_out": "INPUT",
+   "name": "Beam Mult",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_7",
+   "in_out": "INPUT",
+   "name": "Depth Mult",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_8",
+   "in_out": "INPUT",
+   "name": "Plateaus",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_9",
+   "in_out": "INPUT",
+   "name": "Plateau Height",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_10",
+   "in_out": "INPUT",
+   "name": "Plateau Width",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_11",
+   "in_out": "INPUT",
+   "name": "Chine",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_12",
+   "in_out": "INPUT",
+   "name": "Chine Slope",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_13",
+   "in_out": "INPUT",
+   "name": "Bow Wedge",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_14",
+   "in_out": "INPUT",
+   "name": "Stern Block",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_15",
+   "in_out": "INPUT",
+   "name": "Nose Style",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_16",
+   "in_out": "INPUT",
+   "name": "Nose Taper",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_17",
+   "in_out": "INPUT",
+   "name": "Nose Tip",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_18",
+   "in_out": "INPUT",
+   "name": "Keel",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_19",
+   "in_out": "INPUT",
+   "name": "Nozzles",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_20",
+   "in_out": "INPUT",
+   "name": "Panel Density",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_21",
+   "in_out": "INPUT",
+   "name": "Patchwork",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_22",
+   "in_out": "INPUT",
+   "name": "Accent Fields",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_23",
+   "in_out": "INPUT",
+   "name": "Blisters",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_24",
+   "in_out": "INPUT",
+   "name": "Light Rows",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_25",
+   "in_out": "INPUT",
+   "name": "Vents",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_26",
+   "in_out": "INPUT",
+   "name": "Radomes",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_27",
+   "in_out": "INPUT",
+   "name": "Antennas",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_28",
+   "in_out": "INPUT",
+   "name": "Sponsons",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_29",
+   "in_out": "INPUT",
+   "name": "Booms",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_30",
+   "in_out": "INPUT",
+   "name": "Decals",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_31",
+   "in_out": "INPUT",
+   "name": "Thrusters",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_32",
+   "in_out": "INPUT",
+   "name": "Mass Bias",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_33",
+   "in_out": "INPUT",
+   "name": "Waist",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_34",
+   "in_out": "INPUT",
+   "name": "Waist Position",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_35",
+   "in_out": "INPUT",
+   "name": "Saddle",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_36",
+   "in_out": "INPUT",
+   "name": "Stern Style",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_37",
+   "in_out": "INPUT",
+   "name": "Stern Taper",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_38",
+   "in_out": "INPUT",
+   "name": "Stern Tip",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_39",
+   "in_out": "INPUT",
+   "name": "Stern Rake",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_40",
+   "in_out": "INPUT",
+   "name": "Deck Crown",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_41",
+   "in_out": "INPUT",
+   "name": "Keel Crown",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_42",
+   "in_out": "INPUT",
+   "name": "Chine 2",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_43",
+   "in_out": "INPUT",
+   "name": "Chine 2 Slope",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_44",
+   "in_out": "INPUT",
+   "name": "Accent Bands",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_45",
+   "in_out": "INPUT",
+   "name": "Dorsal Stripe",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_46",
+   "in_out": "INPUT",
+   "name": "Hue Jitter",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_47",
+   "in_out": "INPUT",
+   "name": "Window Glow",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_48",
+   "in_out": "INPUT",
+   "name": "Deck Markings",
+   "type": "NodeSocketBool"
+  },
+  {
+   "identifier": "Socket_49",
+   "in_out": "INPUT",
+   "name": "Towers",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_50",
+   "in_out": "INPUT",
+   "name": "Tower Height",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_51",
+   "in_out": "INPUT",
+   "name": "Tower Rake",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_52",
+   "in_out": "INPUT",
+   "name": "Tower Levels",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_53",
+   "in_out": "INPUT",
+   "name": "Tower Width",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_54",
+   "in_out": "INPUT",
+   "name": "Dorsal Fins",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_55",
+   "in_out": "INPUT",
+   "name": "Ventral Fins",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_56",
+   "in_out": "INPUT",
+   "name": "Fin Size",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_57",
+   "in_out": "INPUT",
+   "name": "Prow Pods",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_58",
+   "in_out": "INPUT",
+   "name": "Prow Pod Length",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_59",
+   "in_out": "INPUT",
+   "name": "Nacelles",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_60",
+   "in_out": "INPUT",
+   "name": "Nacelle Position",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_61",
+   "in_out": "INPUT",
+   "name": "Nacelle Standoff",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_62",
+   "in_out": "INPUT",
+   "name": "Nacelle Scale",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_63",
+   "in_out": "INPUT",
+   "name": "Bow Mouth",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_64",
+   "in_out": "INPUT",
+   "name": "Overbite",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_65",
+   "in_out": "INPUT",
+   "name": "Hangars",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_66",
+   "in_out": "INPUT",
+   "name": "Hangar Size",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_67",
+   "in_out": "INPUT",
+   "name": "Deck Trench",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_68",
+   "in_out": "INPUT",
+   "name": "Hull Form",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_69",
+   "in_out": "INPUT",
+   "name": "Hull Spacing",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_70",
+   "in_out": "INPUT",
+   "name": "Module Scale",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_71",
+   "in_out": "INPUT",
+   "name": "Bridge Blocks",
+   "type": "NodeSocketInt"
+  }
+ ],
+ "FI_HullNumber": [
+  {
+   "identifier": "Socket_2",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Value",
+   "type": "NodeSocketInt"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Size",
+   "type": "NodeSocketFloat"
+  }
+ ],
+ "FI_Radome": [
+  {
+   "identifier": "Socket_2",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Size",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Variant",
+   "type": "NodeSocketInt"
+  }
+ ],
+ "FI_SensorBoom": [
+  {
+   "identifier": "Socket_1",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Size",
+   "type": "NodeSocketFloat"
+  }
+ ],
+ "FI_Sponson": [
+  {
+   "identifier": "Socket_1",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Size",
+   "type": "NodeSocketFloat"
+  }
+ ],
+ "FI_VentGrate": [
+  {
+   "identifier": "Socket_3",
+   "in_out": "OUTPUT",
+   "name": "Geometry",
+   "type": "NodeSocketGeometry"
+  },
+  {
+   "identifier": "Socket_0",
+   "in_out": "INPUT",
+   "name": "Length",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_1",
+   "in_out": "INPUT",
+   "name": "Width",
+   "type": "NodeSocketFloat"
+  },
+  {
+   "identifier": "Socket_2",
+   "in_out": "INPUT",
+   "name": "Slats",
+   "type": "NodeSocketInt"
+  }
+ ]
+}
