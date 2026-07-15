@@ -1,9 +1,18 @@
 # FI ShipKit — procedural hard-sci-fi ships in Blender geometry nodes
 
+![Blender 4.5+](https://img.shields.io/badge/Blender-4.5%2B-e87d0d?logo=blender&logoColor=white)
+![100% geometry nodes](https://img.shields.io/badge/geometry_nodes-100%25_procedural-6c4fbb)
+![No add-ons required](https://img.shields.io/badge/add--ons-none_required-2ea44f)
+![Code: GPL-3.0-or-later](https://img.shields.io/badge/code-GPL--3.0--or--later-blue)
+![Assets: CC-BY-4.0](https://img.shields.io/badge/assets-CC--BY--4.0-97ca00)
+
+![FleetKit ships — procedurally generated capital ships with lit windows and running lights](docs/fleet_main.png)
+
 Three generator families, each authored **entirely from Python-built
 geometry-node groups** — no hand-modelled meshes, no third-party node
 packs. Open a kit `.blend`, drop a group on an empty mesh, and drive the
 sliders; or rebuild every kit from source with one headless command each.
+Every ship above is a handful of slider values on one node group.
 
 | kit | generator | language |
 |---|---|---|
@@ -32,6 +41,8 @@ blender -b --python make_fleet_playground.py
 Selftest renders land in `out/*/`. Open a playground `.blend` to inspect
 ships with live sliders (Seed, Class, faction, hull-form and dozens more
 per generator).
+
+![FleetKit ships, stern three-quarter view — drive cavities and deck plateaus](docs/fleet_main_rear.png)
 
 ## Conventions (the pipeline hangs on these)
 
