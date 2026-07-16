@@ -8,7 +8,7 @@
 
 ![FleetKit ships — procedurally generated capital ships with lit windows and running lights](docs/fleet_main.png)
 
-Three generator families, each authored **entirely from Python-built
+Four generator families, each authored **entirely from Python-built
 geometry-node groups** — no hand-modelled meshes, no third-party node
 packs. Open a kit `.blend`, drop a group on an empty mesh, and drive the
 sliders; or rebuild every kit from source with one headless command each.
@@ -19,23 +19,29 @@ Every ship above is a handful of slider values on one node group.
 | `FI_ShipKit.blend` | `FI_FrameShip` (+ dress-pass groups) | stealth hull + working aft: flush faceted plating, machinery honest and confined to the dorsal spine / aft third |
 | `FI_WarKit.blend` | `FI_WarShip` | naval blades: chined monocoque lofts, wedge prow, boat-tail stern, faction palettes (MCR / UNN / BEL), chine light-lines |
 | `FI_FleetKit.blend` | `FI_FleetShip` | bright slab fleet register: plateau decks, recursive paneling, catamaran / asymmetric hull forms, running-light bands |
+| `FI_StationKit.blend` | `FI_Station` | orbital stations: spire citadels, gantry yards, saucer hubs, monolith bastions; fleet faction palettes + an unaligned FPT freeport register, lit-window night-city skins |
+
+![StationKit saucer hub rendering in the viewport — one FI_Station node group, every feature a slider on the modifier](docs/station_main.png)
 
 Requires **Blender 4.5+** (developed on 5.0). Everything runs headless.
 
 ## Quick start
 
 ```
-blender -b --python build_kit.py        # -> FI_ShipKit.blend  + kit_contract.json
-blender -b --python build_warkit.py     # -> FI_WarKit.blend   + war_contract.json
-blender -b --python build_fleetkit.py   # -> FI_FleetKit.blend + fleet_contract.json
+blender -b --python build_kit.py          # -> FI_ShipKit.blend    + kit_contract.json
+blender -b --python build_warkit.py       # -> FI_WarKit.blend     + war_contract.json
+blender -b --python build_fleetkit.py     # -> FI_FleetKit.blend   + fleet_contract.json
+blender -b --python build_stationkit.py   # -> FI_StationKit.blend + station_contract.json
 
-blender -b --python kit_selftest.py     # QA: budgets, attrs, contract, renders
-blender -b --python war_selftest.py     #   (each exits non-zero on any failure)
+blender -b --python kit_selftest.py       # QA: budgets, attrs, contract, renders
+blender -b --python war_selftest.py       #   (each exits non-zero on any failure)
 blender -b --python fleet_selftest.py
+blender -b --python station_selftest.py
 
-blender -b --python make_playground.py        # example fleets ->
-blender -b --python make_war_playground.py    #   *_playground.blend
+blender -b --python make_playground.py         # example fleets ->
+blender -b --python make_war_playground.py     #   *_playground.blend
 blender -b --python make_fleet_playground.py
+blender -b --python make_station_playground.py
 ```
 
 Selftest renders land in `out/*/`. Open a playground `.blend` to inspect
@@ -64,9 +70,9 @@ per generator).
 
 | script | purpose |
 |---|---|
-| `build_kit.py` / `build_warkit.py` / `build_fleetkit.py` | regenerate each kit `.blend` from scratch (idempotent) + its contract JSON |
+| `build_kit.py` / `build_warkit.py` / `build_fleetkit.py` / `build_stationkit.py` | regenerate each kit `.blend` from scratch (idempotent) + its contract JSON |
 | `fi_gn_lib.py` | shared builder layer: the `G` node-graph builder, native deformer/selection dep groups (`fi_deps`), materials, wear shader |
-| `kit_selftest.py` / `war_selftest.py` / `fleet_selftest.py` | QA after every rebuild: tri budgets, attributes, watertightness, knob sweeps, golden sums, workbench renders |
+| `kit_selftest.py` / `war_selftest.py` / `fleet_selftest.py` / `station_selftest.py` | QA after every rebuild: tri budgets, attributes, watertightness, knob sweeps, golden sums, workbench renders |
 | `make_*_playground.py` | link the kits and instantiate example fleets |
 | `ship_export.py` | deterministic export → `.glb` + report (`--collection`, `--auto-orient`, `--max-tris`, `--probe`) |
 | `bake_ship.py` | procedural shaders → PBR texture maps (albedo/ORM/emissive/normal) → textured `.glb` |
@@ -86,6 +92,10 @@ Design documents: `FRAME_DESIGN.md` (frame-family slot grammar),
 - Multi-input Join sockets concatenate in **reverse link-creation
   order**, and element order feeds index-seeded randomness downstream —
   treat element order as part of a group's contract.
+- Weld divider islands **before** per-face relief extrusion (the station
+  kit's order): welding after lets two adjacent panels sunk to
+  near-identical depths merge their sunk borders, deduplicate their
+  coincident side walls, and read as an open edge.
 
 ## Licensing
 

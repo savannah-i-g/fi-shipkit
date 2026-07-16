@@ -42,7 +42,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 src_ob = bpy.data.objects.get(OBJ) or sys.exit(f"no object {OBJ}")
 CONTRACT = {}
 for _cf in ("kit_contract.json", "war_contract.json",
-            "fleet_contract.json"):
+            "fleet_contract.json", "station_contract.json"):
     try:
         with open(os.path.join(HERE, _cf)) as f:
             CONTRACT.update(json.load(f))
