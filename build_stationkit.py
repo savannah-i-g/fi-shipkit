@@ -315,9 +315,9 @@ def build_station_core(profile):
     g.sock_in("Width", "NodeSocketFloat", 140.0, 10.0, 2000.0)
     g.sock_in("Depth", "NodeSocketFloat", 140.0, 10.0, 2000.0)
     g.sock_in("Height", "NodeSocketFloat", 380.0, 10.0, 4000.0)
-    g.sock_in("Levels", "NodeSocketInt", 16, 8, 64)
-    g.sock_in("Cols", "NodeSocketInt", 9, 5, 21)
-    g.sock_in("Rows", "NodeSocketInt", 9, 5, 21)
+    g.sock_in("Levels", "NodeSocketInt", 16, 4, 64)
+    g.sock_in("Cols", "NodeSocketInt", 9, 4, 21)
+    g.sock_in("Rows", "NodeSocketInt", 9, 4, 21)
     g.sock_in("Corner Cut", "NodeSocketFloat", 0.5, 0.0, 1.0)
     g.sock_in("Corner Cut Slope", "NodeSocketFloat", 1.0, 0.3, 3.0)
     g.sock_in("Style", "NodeSocketInt", 0, 0, 4)
@@ -649,6 +649,18 @@ def build_station_dress(mats, hg, parts):
     g.sock_in("Hangars", "NodeSocketInt", 0, 0, 2)
     g.sock_in("Hangar Size", "NodeSocketFloat", 1.0, 0.5, 1.5)
     g.sock_out("Geometry", "NodeSocketGeometry")
+    # Relief + Relief Floor Mult: created AFTER the output so every
+    # pre-existing socket — including the Geometry output — keeps its
+    # identifier (strictly additive contract). Defaults (True, 1.0)
+    # preserve station behavior and goldens exactly. The BuildingKit's
+    # LOD map turns Relief off for light/shell levels — gating the
+    # SELECTION (not the offset) is what removes the x5 face cost,
+    # since boss() extrudes regardless. Relief Floor Mult scales the
+    # relief area floor: at building scale (30x120 m vs 140x380) the
+    # W*H floor passes nearly every panel and relief explodes; ~10
+    # keeps relief on only the largest panels.
+    g.sock_in("Relief", "NodeSocketBool", True)
+    g.sock_in("Relief Floor Mult", "NodeSocketFloat", 1.0, 0.1, 50.0)
     seed = group_in(g, "Seed")
     W = group_in(g, "Footprint")
     H = group_in(g, "Height")
@@ -896,7 +908,10 @@ def build_station_dress(mats, hg, parts):
                              acc_r))
     areap = g.n("GeometryNodeInputMeshFaceArea")
     bigp = g.math("GREATER_THAN", out_sock(areap, "Area"),
-                  g.math("MULTIPLY", g.math("MULTIPLY", W, H), 0.0008))
+                  g.math("MULTIPLY",
+                         g.math("MULTIPLY", g.math("MULTIPLY", W, H),
+                                0.0008),
+                         group_in(g, "Relief Floor Mult")))
     pr_sel = g.n("FunctionNodeBooleanMath", operation="AND")
     g.l(bnot(named_bool("fi_deckwell")), pr_sel.inputs[0])
     g.l(bnot(named_bool("fi_hangar")), pr_sel.inputs[1])
@@ -906,7 +921,10 @@ def build_station_dress(mats, hg, parts):
     pr_sel2 = g.n("FunctionNodeBooleanMath", operation="AND")
     g.l(pr_selb.outputs[0], pr_sel2.inputs[0])
     g.l(bigp, pr_sel2.inputs[1])
-    geo, _, _ = boss(g, geo, pr_sel2.outputs[0], d_relief, 0.90,
+    pr_sel3 = g.n("FunctionNodeBooleanMath", operation="AND")
+    g.l(pr_sel2.outputs[0], pr_sel3.inputs[0])
+    g.l(group_in(g, "Relief"), pr_sel3.inputs[1])
+    geo, _, _ = boss(g, geo, pr_sel3.outputs[0], d_relief, 0.90,
                      individual=True)
 
     # blisters: two-step chamfered module housings on seeded roof panels
@@ -916,7 +934,10 @@ def build_station_dress(mats, hg, parts):
     upb = g.math("GREATER_THAN", nsb.outputs[2], 0.8)
     areab = g.n("GeometryNodeInputMeshFaceArea")
     bigb = g.math("GREATER_THAN", out_sock(areab, "Area"),
-                  g.math("MULTIPLY", g.math("MULTIPLY", W, H), 0.0012))
+                  g.math("MULTIPLY",
+                         g.math("MULTIPLY", g.math("MULTIPLY", W, H),
+                                0.0012),
+                         group_in(g, "Relief Floor Mult")))
     fidb = g.n("GeometryNodeInputIndex")
     b_pick = g.math("LESS_THAN",
                     g.rand_float(0.0, 1.0, out_sock(fidb, "Index"),
@@ -1057,9 +1078,9 @@ def build_station_core_dressed(parts):
     g.sock_in("Width", "NodeSocketFloat", 140.0, 10.0, 2000.0)
     g.sock_in("Depth", "NodeSocketFloat", 140.0, 10.0, 2000.0)
     g.sock_in("Height", "NodeSocketFloat", 380.0, 10.0, 4000.0)
-    g.sock_in("Levels", "NodeSocketInt", 16, 8, 64)
-    g.sock_in("Cols", "NodeSocketInt", 9, 5, 21)
-    g.sock_in("Rows", "NodeSocketInt", 9, 5, 21)
+    g.sock_in("Levels", "NodeSocketInt", 16, 4, 64)
+    g.sock_in("Cols", "NodeSocketInt", 9, 4, 21)
+    g.sock_in("Rows", "NodeSocketInt", 9, 4, 21)
     g.sock_in("Corner Cut", "NodeSocketFloat", 0.5, 0.0, 1.0)
     g.sock_in("Corner Cut Slope", "NodeSocketFloat", 1.0, 0.3, 3.0)
     g.sock_in("Style", "NodeSocketInt", 0, 0, 4)
@@ -1096,6 +1117,9 @@ def build_station_core_dressed(parts):
     g.sock_in("Hangars", "NodeSocketInt", 0, 0, 2)
     g.sock_in("Hangar Size", "NodeSocketFloat", 1.0, 0.5, 1.5)
     g.sock_out("Geometry", "NodeSocketGeometry")
+    # appended after the output: strictly additive (see FI_StationDress)
+    g.sock_in("Relief", "NodeSocketBool", True)
+    g.sock_in("Relief Floor Mult", "NodeSocketFloat", 1.0, 0.1, 50.0)
 
     core = gcall(g, parts["core"], wires={
         k: group_in(g, k) for k in (
@@ -1109,7 +1133,8 @@ def build_station_core_dressed(parts):
         "Seed", "Faction", "Panel Density", "Patchwork", "Accent Fields",
         "Accent Bands", "Meridian Stripe", "Hue Jitter", "Window Glow",
         "Light Rows", "Deck Markings", "Blisters", "Trenches",
-        "Trench Depth", "Hangars", "Hangar Size")}
+        "Trench Depth", "Hangars", "Hangar Size", "Relief",
+        "Relief Floor Mult")}
     dwires["Mesh"] = out_sock(core, "Geometry")
     dwires["Footprint"] = group_in(g, "Width")
     dwires["Height"] = group_in(g, "Height")
@@ -1212,15 +1237,21 @@ def build_station_tank(mats):
     g.sock_in("Length", "NodeSocketFloat", 40.0, 2.0, 800.0)
     g.sock_in("Seed", "NodeSocketInt", 0)
     g.sock_out("Geometry", "NodeSocketGeometry")
+    # Verts: created after the output (strictly additive); default 10 =
+    # the old hardcoded count, so station behavior/goldens are
+    # unchanged. Building LODs feed 8/6.
+    g.sock_in("Verts", "NodeSocketInt", 10, 6, 16)
     cnt = group_in(g, "Count")
     R = group_in(g, "Radius")
     L = group_in(g, "Length")
     seed = group_in(g, "Seed")
+    tverts = group_in(g, "Verts")
     cap = g.n("GeometryNodeJoinGeometry")
-    g.l(_prim(g, "cyl", (R, L), None, None, mats["metal"], verts=10),
+    g.l(_prim(g, "cyl", (R, L), None, None, mats["metal"], verts=tverts),
         cap.inputs[0])
     for sz in (1.0, -1.0):
-        sph = _prim(g, "sphere", (R,), None, None, mats["metal"], verts=10)
+        sph = _prim(g, "sphere", (R,), None, None, mats["metal"],
+                    verts=tverts)
         sq = g.n("GeometryNodeTransform")
         g.l(sph, sq.inputs[0])
         in_sock(sq, "Scale").default_value = (1.0, 1.0, 0.55)

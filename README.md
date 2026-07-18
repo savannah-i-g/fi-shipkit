@@ -8,7 +8,7 @@
 
 ![FleetKit ships — procedurally generated capital ships with lit windows and running lights](docs/fleet_main.png)
 
-Four generator families, each authored **entirely from Python-built
+Five generator families, each authored **entirely from Python-built
 geometry-node groups** — no hand-modelled meshes, no third-party node
 packs. Open a kit `.blend`, drop a group on an empty mesh, and drive the
 sliders; or rebuild every kit from source with one headless command each.
@@ -20,8 +20,11 @@ Every ship above is a handful of slider values on one node group.
 | `FI_WarKit.blend` | `FI_WarShip` | naval blades: chined monocoque lofts, wedge prow, boat-tail stern, faction palettes (MCR / UNN / BEL), chine light-lines |
 | `FI_FleetKit.blend` | `FI_FleetShip` | bright slab fleet register: plateau decks, recursive paneling, catamaran / asymmetric hull forms, running-light bands |
 | `FI_StationKit.blend` | `FI_Station` | orbital stations: spire citadels, gantry yards, saucer hubs, monolith bastions; fleet faction palettes + an unaligned FPT freeport register, lit-window night-city skins |
+| `FI_BuildingKit.blend` | `FI_Building` | planetside city buildings: tower blocks, industrial works, courtyard hab slabs, spaceport terminals — grounded at z=0, with a first-class **LOD knob** (full dress / light / shell) for instancing whole districts |
 
 ![StationKit saucer hub rendering in the viewport — one FI_Station node group, every feature a slider on the modifier](docs/station_main.png)
+
+![BuildingKit industrial works in the viewport — Form, LOD and Detail are sliders on the same FI_Building modifier](docs/building_main.png)
 
 Requires **Blender 4.5+** (developed on 5.0). Everything runs headless.
 
@@ -31,17 +34,20 @@ Requires **Blender 4.5+** (developed on 5.0). Everything runs headless.
 blender -b --python build_kit.py          # -> FI_ShipKit.blend    + kit_contract.json
 blender -b --python build_warkit.py       # -> FI_WarKit.blend     + war_contract.json
 blender -b --python build_fleetkit.py     # -> FI_FleetKit.blend   + fleet_contract.json
-blender -b --python build_stationkit.py   # -> FI_StationKit.blend + station_contract.json
+blender -b --python build_stationkit.py   # -> FI_StationKit.blend  + station_contract.json
+blender -b --python build_buildingkit.py  # -> FI_BuildingKit.blend + building_contract.json
 
 blender -b --python kit_selftest.py       # QA: budgets, attrs, contract, renders
 blender -b --python war_selftest.py       #   (each exits non-zero on any failure)
 blender -b --python fleet_selftest.py
 blender -b --python station_selftest.py
+blender -b --python building_selftest.py
 
 blender -b --python make_playground.py         # example fleets ->
 blender -b --python make_war_playground.py     #   *_playground.blend
 blender -b --python make_fleet_playground.py
 blender -b --python make_station_playground.py
+blender -b --python make_building_playground.py
 ```
 
 Selftest renders land in `out/*/`. Open a playground `.blend` to inspect
@@ -65,20 +71,27 @@ per generator).
   the modifiers read them live.
 - Greeble convention: origin at the hull-contact face, +Z out of the hull,
   +X fore-aft, footprint ~0.4–1.2 m, ≤200 tris.
+- **Reserved socket names**: `Detail` (tessellation, 0–2 — `bake_ship.py`
+  evaluates its HI bake source at 2) and `LOD` (dress intensity, 0 full /
+  1 light / 2 shell — consumed by `bake_ship.py --lods`). Orthogonal by
+  contract; keep the exact names, the pipeline finds them via the
+  contract JSONs.
 
 ## Scripts
 
 | script | purpose |
 |---|---|
-| `build_kit.py` / `build_warkit.py` / `build_fleetkit.py` / `build_stationkit.py` | regenerate each kit `.blend` from scratch (idempotent) + its contract JSON |
+| `build_kit.py` / `build_warkit.py` / `build_fleetkit.py` / `build_stationkit.py` / `build_buildingkit.py` | regenerate each kit `.blend` from scratch (idempotent) + its contract JSON |
 | `fi_gn_lib.py` | shared builder layer: the `G` node-graph builder, native deformer/selection dep groups (`fi_deps`), materials, wear shader |
-| `kit_selftest.py` / `war_selftest.py` / `fleet_selftest.py` / `station_selftest.py` | QA after every rebuild: tri budgets, attributes, watertightness, knob sweeps, golden sums, workbench renders |
+| `kit_selftest.py` / `war_selftest.py` / `fleet_selftest.py` / `station_selftest.py` / `building_selftest.py` | QA after every rebuild: tri budgets, attributes, watertightness, knob sweeps, golden sums, workbench renders |
 | `make_*_playground.py` | link the kits and instantiate example fleets |
 | `ship_export.py` | deterministic export → `.glb` + report (`--collection`, `--auto-orient`, `--max-tris`, `--probe`) |
-| `bake_ship.py` | procedural shaders → PBR texture maps (albedo/ORM/emissive/normal) → textured `.glb` |
+| `bake_ship.py` | procedural shaders → PBR texture maps (albedo/ORM/emissive/normal) → textured `.glb`; `--lods "0:2048,1:1024,2:256"` exports one GLB + texture set per LOD, with optional fail-fast `--lod-budgets` |
 
 Design documents: `FRAME_DESIGN.md` (frame-family slot grammar),
 `TEXTURE_DESIGN.md` (wear-shader + bake method).
+
+![BuildingKit hab slab — courtyard ring of four dressed bodies, lit windows facing the court](docs/building_hab.png)
 
 ## Gotchas baked into the code (learned the hard way)
 
@@ -96,6 +109,11 @@ Design documents: `FRAME_DESIGN.md` (frame-family slot grammar),
   kit's order): welding after lets two adjacent panels sunk to
   near-identical depths merge their sunk borders, deduplicate their
   coincident side walls, and read as an open edge.
+- Area floors scale with body size (`W·H`): the same relief settings that
+  read as sparse detail on a 400 m station explode into a ×5 face
+  multiplier on a 30 m building. `Relief Floor Mult` on the dress is the
+  lever — and knobs whose geometry never survives the floor should not
+  ship as knobs.
 
 ## Licensing
 
